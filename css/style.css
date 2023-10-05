@@ -1,0 +1,25 @@
+@import url(https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css);
+
+@import "reset.css";
+@import "variables.css";
+@import "transition.css";
+
+/* Screens */
+@import "screens/sign-in.css";
+@import "screens/background.css";
+@import "screens/to-do.css";
+/* style css added here */
+@import "screens/notes.css";
+@import "screens/settings.css";
+
+
+html {
+  font-size: calc(1vw + 5px);
+  overflow: hidden;
+}
+
+body {
+  font-family: var(--font);
+  height: 100vh;
+  width: 100vw;
+}

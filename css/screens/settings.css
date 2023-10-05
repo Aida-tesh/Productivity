@@ -1,0 +1,205 @@
+.background__setting {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  text-transform: uppercase;
+  z-index: 1;
+}
+
+.background__setting form {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.background__setting h3 {
+  font-size: 1rem;
+  margin: 1.5em;
+}
+
+.background__setting .setting__rename .rename__input {
+  background-color: var(--gray);
+  border: none;
+  border-radius: 2em;
+  color: var(--white);
+  font-family: var(--font);
+  font-size: 1.2rem;
+  height: 2em;
+  text-align: center;
+  width: 9em;
+}
+
+.background__setting .setting__rename .rename__input::placeholder {
+  font-size: 0.8rem;
+}
+
+.background__setting .setting__rename .rename__input:focus {
+  background-color: var(--dark-gray);
+  outline: none;
+  transition: var(--focus-transition);
+}
+
+.background__setting .twenty-four-hour__toggle,
+.background__setting .dark-theme__toggle,
+.background__setting .left-menu__toggle {
+  display: inline-block;
+  height: 1.2em;
+  position: relative;
+  width: 2.6em;
+}
+
+.twenty-four-hour__toggle .toggle__switch,
+.dark-theme__toggle .toggle__switch,
+.left-menu__toggle .toggle__switch {
+  height: 0;
+  opacity: 0;
+  width: 0;
+}
+
+.twenty-four-hour__toggle .toggle__slider,
+.dark-theme__toggle .toggle__slider,
+.left-menu__toggle .toggle__slider {
+  background-color: rgb(180, 180, 180);
+  border-radius: 0.6em;
+  bottom: 0;
+  cursor: pointer;
+  height: 1.2em;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: transform var(--medium-speed);
+  -webkit-transition: transform var(--medium-speed);
+}
+
+.twenty-four-hour__toggle .toggle__slider::before,
+.dark-theme__toggle .toggle__slider::before,
+.left-menu__toggle .toggle__slider::before {
+  background-color: var(--white);
+  border-radius: 50%;
+  bottom: 0.15em;
+  content: "";
+  height: 0.9em;
+  left: 0.15em;
+  position: absolute;
+  transition: transform 0.2s;
+  -webkit-transition: transform 0.2s;
+  width: 0.9em;
+}
+
+.toggle__switch:checked + .toggle__slider,
+.toggle__switch:checked + .toggle__slider,
+.toggle__switch:checked + .toggle__slider {
+  background-color: var(--toggle-green);
+}
+
+.toggle__switch:checked + .toggle__slider::before,
+.toggle__switch:checked + .toggle__slider::before,
+.toggle__switch:checked + .toggle__slider::before {
+  transform: translateX(1.4em);
+  -ms-transform: translateX(1.4em);
+  -webkit-transform: translateX(1.4em);
+}
+
+.setting__reset .reset__button {
+  background-color: var(--alert-red);
+  border: none;
+  border-radius: 1em;
+  color: var(--white);
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 0.8rem;
+  padding: 0.5em 0.8em;
+  text-transform: inherit;
+}
+
+.background__setting .setting__rename-modal {
+  background-color: var(--white);
+  border-radius: 2em;
+  color: var(--black);
+  font-size: 1rem;
+  padding: 1em 1.5em;
+  position: fixed;
+  text-align: center;
+  text-transform: none;
+}
+
+.background__setting .setting__reset-modal {
+  background-color: var(--white);
+  border-radius: 0.5em;
+  color: var(--black);
+  padding: 1.5em;
+  position: fixed;
+  text-align: center;
+}
+
+.background__setting .setting__reset-modal h3 {
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 0 auto 1em auto;
+}
+
+.background__setting .setting__reset-modal span {
+  font-size: 0.9rem;
+}
+
+.background__setting .setting__reset-modal form {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.background__setting .setting__reset-modal form button {
+  border: none;
+  border-radius: 1em;
+  color: var(--white);
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-family: inherit;
+  height: 2em;
+  margin-top: 2em;
+  text-transform: inherit;
+  width: 4em;
+}
+
+.background__setting .setting__reset-modal form button:first-child {
+  background-color: var(--gray);
+}
+
+.background__setting .setting__reset-modal form button:last-child {
+  background-color: var(--alert-red);
+}
+
+@media screen and (max-width: 1024px) {
+  .background__setting h3 {
+    font-size: 1.1rem;
+  }
+}
+
+@media screen and (max-width: 896px) {
+  .background__setting h3 {
+    font-size: 1.2rem;
+  }
+
+  .setting__reset .reset__button {
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (max-width: 864px) {
+  .background__setting h3 {
+    font-size: 1.3rem;
+  }
+
+  .setting__reset .reset__button {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 260px) {
+  .background__setting {
+    display: none;
+  }
+}

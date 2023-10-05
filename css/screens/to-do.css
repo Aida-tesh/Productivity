@@ -1,0 +1,245 @@
+.background__to-do {
+  display: flex;
+  height: 100vh;
+  position: relative;
+  width: 85vw;
+}
+
+.background__to-do .to-do__titles {
+  align-items: center;
+  display: flex;
+}
+
+.background__to-do .to-do__titles .titles__header {
+  text-transform: uppercase;
+}
+
+.background__to-do .to-do__titles .titles__header h3,
+.background__to-do .to-do__titles .titles__header h2 {
+  margin: 0.5em auto;
+}
+
+.background__to-do .titles__header h3 {
+  font-size: 1.5rem;
+}
+
+.background__to-do .titles__header h2 {
+  font-size: 2rem;
+}
+
+.background__to-do .to-do__titles .titles__divider {
+  background-color: var(--white);
+  height: 90vh;
+  margin: auto 1.5em auto 2em;
+  width: 0.1em;
+}
+
+.background__to-do .to-do__to-do-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.background__to-do .to-do__to-do-list .to-do-list__form {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin: 0.5em 0;
+  width: 30em;
+}
+
+.background__to-do .to-do-list__form input[type="text"] {
+  background-color: var(--gray);
+  border: none;
+  border-radius: 2em;
+  color: var(--white);
+  font: inherit;
+  padding: 0.7em;
+  width: 20em;
+}
+
+.background__to-do .to-do-list__form input[type="text"]:focus {
+  background-color: var(--dark-gray);
+  outline: none;
+  transition: var(--focus-transition);
+}
+
+.background__to-do .to-do-list__form .form__counter {
+  background-color: var(--dark-gray);
+  border-radius: 0.5em;
+  font-size: 1rem;
+  padding: 0.5em;
+}
+
+.background__to-do .to-do__to-do-list .to-do-list__list {
+  font-size: 1.1rem;
+  height: 72vh;
+  margin: 0.5em auto 0.5em auto;
+  overflow-y: auto;
+  width: 55vw;
+  word-break: break-all;
+}
+
+.background__to-do .to-do-list__list::-webkit-scrollbar,
+.background__to-do .to-do-list__list::-webkit-scrollbar-thumb {
+  border-radius: 0.5em;
+  width: 0.8em;
+}
+
+.background__to-do .to-do-list__list::-webkit-scrollbar {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.background__to-do .to-do-list__list::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.background__to-do .to-do-list__list::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.background__to-do .to-do-list__list .list__to-do {
+  align-items: flex-start;
+  display: flex;
+}
+
+.background__to-do .to-do-list__list .list__to-do:not(:first-child) {
+  margin: 0.7em auto;
+}
+
+.background__to-do .to-do-list__list .list__to-do:first-child {
+  margin: auto auto 0.7em auto;
+}
+
+.background__to-do .list__to-do input[type="button"],
+.background__to-do .list__to-do input[type="checkbox"] {
+  cursor: pointer;
+  min-height: 1.45em;
+  min-width: 1.45em;
+}
+
+.background__to-do .list__to-do input[type="button"] {
+  background: url("../../img/to-do/x.png") no-repeat center/80%;
+  border: none;
+  margin: 0.1em 0.2em 0 0;
+  opacity: 0.5;
+}
+
+.background__to-do .list__to-do input[type="button"]:hover {
+  opacity: 1;
+  transition: var(--hover-transition);
+}
+
+.background__to-do .list__to-do input[type="checkbox"] {
+  accent-color: var(--toggle-green);
+  margin-top: 0.15em;
+}
+
+.background__to-do .to-do-list__list .list__to-do span {
+  margin-left: 0.5em;
+}
+
+/* JS Class */
+.checked {
+  text-decoration: line-through;
+}
+
+@media screen and (max-width: 962px) {
+  .background__to-do .list__to-do input[type="button"],
+  .background__to-do .list__to-do input[type="checkbox"] {
+    min-height: 1.3em;
+    min-width: 1.3em;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .background__to-do {
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .background__to-do .to-do__titles .titles__header {
+    margin-right: auto;
+  }
+
+  .background__to-do .to-do__titles {
+    flex-direction: column;
+  }
+
+  .background__to-do .to-do__titles .titles__divider {
+    height: 0.1em;
+    margin: 1em auto 0.5em auto;
+    width: 80vw;
+  }
+
+  .background__to-do .to-do__to-do-list .to-do-list__list {
+    height: 60vh;
+    width: 80vw;
+  }
+
+  .background__to-do .list__to-do input[type="button"],
+  .background__to-do .list__to-do input[type="checkbox"] {
+    min-height: 1.1em;
+    min-width: 1.1em;
+  }
+
+  .background__to-do .list__to-do input[type="button"] {
+    margin-top: -0.2em;
+  }
+
+  .background__to-do .list__to-do input[type="checkbox"] {
+    margin-top: -0.1em;
+  }
+}
+
+@media screen and (max-width: 601px) {
+  .background__to-do .list__to-do input[type="button"],
+  .background__to-do .list__to-do input[type="checkbox"] {
+    margin-top: 0;
+    min-height: 1em;
+    min-width: 1em;
+  }
+
+  .background__to-do .list__to-do input[type="button"] {
+    margin-top: -0.21em;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .background__to-do .list__to-do input[type="button"],
+  .background__to-do .list__to-do input[type="checkbox"] {
+    min-height: 0.9em;
+    min-width: 0.9em;
+  }
+
+  .background__to-do .list__to-do input[type="button"] {
+    margin-right: 0;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .background__to-do .to-do__to-do-list .to-do-list__form {
+    width: 28em;
+  }
+
+  .background__to-do .to-do-list__form .form__counter {
+    font-size: 0.8rem;
+  }
+}
+
+@media screen and (max-width: 272px) {
+  .background__to-do .to-do__to-do-list .to-do-list__form {
+    width: 27em;
+  }
+
+  .background__to-do .to-do-list__form .form__counter {
+    font-size: 0.7rem;
+  }
+}
+
+@media screen and (max-width: 260px) {
+  .background__to-do {
+    display: none;
+  }
+}
