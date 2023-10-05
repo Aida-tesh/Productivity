@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-D9FH5EJRXF"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-D9FH5EJRXF");
+    </script>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Productivity</title>
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="img/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="img/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="img/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="img/favicon/site.webmanifest" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <title>Productivity</title>
+    <!-- tried js here -->
+  </head>
+  <body>
+    <div class="background js-background">
+      <div class="background--darkened js-background--darkened">
+        <div class="form-background js-form-background hidden">
+          <form
+            class="form-background__sign-in js-form-background__sign-in hidden"
+          >
+            <h1>Welcome!</h1>
+            <span>What is your name?</span>
+            <input
+              class="js-sign-in__input"
+              maxlength="30"
+              placeholder="Up to 30 characters"
+              required
+              type="text"
+            />
+            <span class="sign-in__message js-sign-in__message"
+              >You can always change it later.</span
+            >
+          </form>
+        </div>
+        <div class="background__home js-background__home">
+          <main>
+            <h3 class="home__date js-home__date">Sun, Jan 00, 0000</h3>
+            <h2 class="home__clock js-home__clock">
+              <span class="clock__numbers js-clock__numbers">00:00:00</span>
+              <span class="clock__am-pm js-clock__am-pm">am</span>
+            </h2>
+            <h1 class="home__greeting js-home__greeting">Hello!</h1>
+          </main>
+        </div>
+        <div class="background__to-do js-background__to-do hidden">
+          <div class="to-do__titles">
+            <header class="titles__header js-titles__header">
+              <h3>Sun, Jan 00, 0000</h3>
+              <h2>To-Do List</h2>
+            </header>
+            <div class="titles__divider"></div>
+          </div>
+          <div class="to-do__to-do-list">
+            <form class="to-do-list__form js-to-do-list__form">
+              <input type="text" required placeholder="Write a to-do here." />
+              <span class="form__counter js-form__counter">00/00 Done</span>
+            </form>
+            <ul class="to-do-list__list js-to-do-list__list"></ul>
+          </div>
+        </div>
+        <!-- content for notes -->
+          
+          <!-- content details -->
+            <div class="popup-box">
+              <div class="popup">
+                <div class="content">
+                  <header>
+                  <p></p>
+                  <i class="uil uil-times"></i>
+                  </header>
+                  <form action="#">
+                  <div class="row title">
+                    <label>Title</label>
+                    <input type="text" spellcheck="false">
+                  </div>
+                  <div class="row description">
+                    <label>Description</label>
+                    <textarea spellcheck="false"></textarea>
+                  </div>
+                  <button></button>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="background__notes aida hidden">
+          <div class="wrapper">
+            <li class="add-box">
+              <div class="icon"><i class="uil uil-plus"></i></div>
+              <p>Add new note</p>
+            </li>
+          </div>
+        </div>
+        
+        <div class="background__setting js-background__setting hidden">
+          <form class="setting__rename js-setting__rename">
+            <h3 class="rename__title">Rename</h3>
+            <input
+              class="rename__input js-rename__input"
+              maxlength="30"
+              placeholder="Press 'Enter' to Confirm"
+              required
+              type="text"
+            />
+          </form>
+          <form class="setting__twenty-four-hour">
+            <h3>24-Hour Clock</h3>
+            <label class="twenty-four-hour__toggle js-twenty-four-hour__toggle">
+              <input class="toggle__switch js-toggle__switch" type="checkbox" />
+              <span class="toggle__slider"></span>
+            </label>
+          </form>
+          <form class="setting__dark-theme">
+            <h3>Dark Theme</h3>
+            <label class="dark-theme__toggle js-dark-theme__toggle">
+              <input class="toggle__switch js-toggle__switch" type="checkbox" />
+              <span class="toggle__slider"></span>
+            </label>
+          </form>
+          <form class="setting__left-menu">
+            <h3>Menu on the Left</h3>
+            <label class="left-menu__toggle js-left-menu__toggle">
+              <input class="toggle__switch js-toggle__switch" type="checkbox" />
+              <span class="toggle__slider"></span>
+            </label>
+          </form>
+          <form class="setting__reset">
+            <h3>Reset Data</h3>
+            <button class="reset__button js-reset__button">Reset</button>
+          </form>
+          <div
+            class="setting__rename-modal js-setting__rename-modal hidden"
+          ></div>
+          <div class="setting__reset-modal js-setting__reset-modal hidden">
+            <h3>Reset Data?</h3>
+            <span>This action cannot be undone.</span>
+            <form>
+              <button>No</button>
+              <button>Yes</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="background__smile-modal js-background__smile-modal removed">
+        "Be the change you want to see in the World"
+      </div>
+      <nav class="background__navigation js-background__navigation">
+        <ul>
+          <div>
+            <li>
+              <button>
+                <img alt="home" src="img/nav-bar/home.png" />
+              </button>
+            </li>
+            <li>
+              <button>
+                <img alt="to-do" src="img/nav-bar/to-do.png" />
+              </button>
+            </li>
+            <!-- add new button -->
+            <li>
+              <button>
+                <img alt="notes" src="img/nav-bar/calendar.png" />
+              </button>
+            </li>
+            <li>
+              <button>
+                <img alt="setting" src="img/nav-bar/setting.png" />
+              </button>
+            </li>
+          </div>
+          <li>
+            <button
+              class="navigation__smile-button js-navigation__smile-button"
+            >
+              <img alt="Be the change you want to see in the World" src="img/nav-bar/smile.png" />
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <script src="js/global.js"></script>
+    <script src="js/transition.js"></script>
+    <script src="js/nav-bar.js"></script>
+    <script src="js/sign-in.js"></script>
+    <script src="js/time.js"></script>
+    <script src="js/to-do.js"></script>
+    <script src="js/settings.js"></script>
+   
+    <!-- added js source here ok --> 
+    <script src="js/notes.js"></script>
+    
+  </body>
+</html>
